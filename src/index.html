@@ -15,26 +15,31 @@
           <div>
             <label for="input-email">Email:</label>
             <input type="email" id="input-email" name="input-email" required>
+            <span class="error"></span>
           </div>
 
           <div>
             <label for="input-country">Country:</label>
             <input type="text" id="input-country" name="input-country" required>
+            <span class="error"></span>
           </div>
 
           <div>
             <label for="input-postal-code">Postal Code:</label>
             <input type="number" id="input-postal-code" name="input-postal-code" min="4000" max="100000" required>
+            <span class="error"></span>
           </div>
 
           <div>
             <label for="input-password">Password:</label>
             <input type="text" id="input-password" name="input-password" minlength="5" required>
+            <span class="error"></span>
           </div>
 
           <div>
             <label for="input-confirm-password">Confirm Password:</label>
             <input type="text" id="input-confirm-password" name="input-confirm-password" required>
+            <span class="error"></span>
           </div>
           
           <input type="submit" value="submit">

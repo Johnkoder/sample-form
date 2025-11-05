@@ -1,3 +1,6 @@
-const hello = 'hello';
+import Form from './form';
 
-console.log(hello);
+document.addEventListener('DOMContentLoaded', () => {
+  const form = new Form();
+  form.init();
+});

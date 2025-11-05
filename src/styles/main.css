@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+form > fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    width: 500px;
+    padding: 30px 25px;
+    border-radius: 10px;
+}
+
+form > fieldset div {
+    display: flex;
+    position: relative;
+}
+
+form > fieldset div label {
+    margin-right: 15px;
+    flex: 1;
+}
+
+form > fieldset div input {
+    flex: 2;
+}
+
+.error {
+    position: absolute;
+    left: 35%;
+    top: 25px;
+    font-size: 0.7rem;
+    color: red;
+}

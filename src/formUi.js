@@ -46,8 +46,10 @@ export default class FormUi {
         } else if (this.inputEmail.validity.patternMismatch) {
           errEl.textContent = 'Must be in @gmail.com format';
         }
+        this.inputEmail.classList.add('active');
       } else {
         errEl.textContent = '';
+        this.inputEmail.classList.remove('active');
       }
     });
 
@@ -57,8 +59,10 @@ export default class FormUi {
         if (this.inputCountry.validity.valueMissing) {
           errEl.textContent = 'Enter a Country';
         }
+        this.inputCountry.classList.add('active');
       } else {
         errEl.textContent = '';
+        this.inputCountry.classList.remove('active');
       }
     });
 
@@ -73,8 +77,10 @@ export default class FormUi {
         ) {
           errEl.textContent = 'Invalid Postal Code';
         }
+        this.inputPostalCode.classList.add('active');
       } else {
         errEl.textContent = '';
+        this.inputPostalCode.classList.remove('active');
       }
     });
 
@@ -86,8 +92,10 @@ export default class FormUi {
         } else if (this.inputPassword.validity.tooShort) {
           errEl.textContent = 'Too short';
         }
+        this.inputPassword.classList.add('active');
       } else {
         errEl.textContent = '';
+        this.inputPassword.classList.remove('active');
       }
     });
 
@@ -97,10 +105,13 @@ export default class FormUi {
         if (this.inputConfirmPassword.validity.valueMissing) {
           errEl.textContent = 'Re-enter the Password';
         }
+        this.inputConfirmPassword.classList.add('active');
       } else if (this.inputConfirmPassword.value !== this.inputPassword.value) {
         errEl.textContent = 'Password do not match';
+        this.inputConfirmPassword.classList.add('active');
       } else {
         errEl.textContent = '';
+        this.inputConfirmPassword.classList.remove('active');
       }
     });
   }

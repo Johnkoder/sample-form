@@ -47,3 +47,7 @@ form > fieldset div input {
     font-size: 0.7rem;
     color: red;
 }
+
+.active {
+    border: 1px solid red;
+}

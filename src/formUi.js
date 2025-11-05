@@ -19,6 +19,18 @@ export default class FormUi {
   handleSubmitBtnValidation() {
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (
+        this.inputEmail.checkValidity() &&
+        this.inputCountry.checkValidity() &&
+        this.inputPostalCode.checkValidity() &&
+        this.inputPassword.checkValidity() &&
+        this.inputConfirmPassword.checkValidity() &&
+        this.inputConfirmPassword.value === this.inputPassword.value
+      ) {
+        console.log('success');
+      } else {
+        console.log('failed');
+      }
     });
   }
 
@@ -84,7 +96,7 @@ export default class FormUi {
         if (this.inputConfirmPassword.validity.valueMissing) {
           errEl.textContent = 'Re-enter the Password';
         }
-      } else if (this.inputConfirmPassword.value != this.inputPassword.value) {
+      } else if (this.inputConfirmPassword.value !== this.inputPassword.value) {
         errEl.textContent = 'Password do not match';
       } else {
         errEl.textContent = '';
@@ -94,5 +106,5 @@ export default class FormUi {
 }
 
 // TODO:
-// - implement 'input' listener
-// - implement 'submit' listener
+// Refactor: put all the validation blocks into separate functions and
+// return for submitBtn validation.

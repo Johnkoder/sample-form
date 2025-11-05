@@ -5,3 +5,6 @@ export default class Form {
     console.log('test');
   }
 }
+
+// TODO
+// - queryselect elements

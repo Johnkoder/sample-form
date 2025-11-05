@@ -14,7 +14,7 @@
         <fieldset>
           <div>
             <label for="input-email">Email:</label>
-            <input type="email" id="input-email" name="input-email" required>
+            <input type="email" id="input-email" name="input-email" pattern=".+@gmail\.com" required>
             <span class="error"></span>
           </div>
 
@@ -32,13 +32,13 @@
 
           <div>
             <label for="input-password">Password:</label>
-            <input type="text" id="input-password" name="input-password" minlength="5" required>
+            <input type="password" id="input-password" name="input-password" minlength="5" required>
             <span class="error"></span>
           </div>
 
           <div>
             <label for="input-confirm-password">Confirm Password:</label>
-            <input type="text" id="input-confirm-password" name="input-confirm-password" required>
+            <input type="password" id="input-confirm-password" name="input-confirm-password" required>
             <span class="error"></span>
           </div>
           

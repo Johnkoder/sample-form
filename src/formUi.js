@@ -9,6 +9,7 @@ export default class FormUi {
     this.inputPassword = this.form.querySelector('#input-password');
     this.inputConfirmPassword = this.form.querySelector('#input-confirm-password');
     this.submitBtn = this.form.querySelector('input[type="submit"]');
+    this.resultEl = document.querySelector('#result');
   }
 
   init() {
@@ -27,9 +28,9 @@ export default class FormUi {
         this.inputConfirmPassword.checkValidity() &&
         this.inputConfirmPassword.value === this.inputPassword.value
       ) {
-        console.log('success');
+        this.resultEl.textContent = 'Success';
       } else {
-        console.log('failed');
+        this.resultEl.textContent = 'Failed';
       }
     });
   }

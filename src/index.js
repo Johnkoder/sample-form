@@ -1,6 +1,6 @@
-import Form from './form';
+import FormUi from './formUi.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const form = new Form();
+  const form = new FormUi();
   form.init();
 });

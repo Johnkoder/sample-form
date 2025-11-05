@@ -1,4 +1,5 @@
-# webpack-template
+# Sample Form
+- For Form Validation practice
 
   🧱 Tech Stack & Tools<br>
 <ul>
